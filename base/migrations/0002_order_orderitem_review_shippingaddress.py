@@ -41,17 +41,7 @@ class Migration(migrations.Migration):
                 ('order', models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='base.order')),
             ],
         ),
-        migrations.CreateModel(
-            name='Review',
-            fields=[
-                ('name', models.CharField(blank=True, max_length=200, null=True)),
-                ('rating', models.IntegerField(blank=True, default=0, null=True)),
-                ('comment', models.TextField(blank=True, null=True)),
-                ('_id', models.AutoField(editable=False, primary_key=True, serialize=False)),
-                ('product', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='base.product')),
-                ('user', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
-            ],
-        ),
+
         migrations.CreateModel(
             name='OrderItem',
             fields=[
