@@ -5,7 +5,7 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
-function CartScreen({ match, location, history }) {
+function NotFound({ match, location, history }) {
     const productId = match.params.id
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
     const dispatch = useDispatch()
@@ -29,10 +29,10 @@ function CartScreen({ match, location, history }) {
     }
 
     return (
-        <body>
+        <h1>
             404 Not Found
-        </body>
+        </h1>
     )
 }
 
-export default CartScreen
+export default NotFound

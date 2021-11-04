@@ -1,7 +1,6 @@
 import { Container } from 'react-bootstrap'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Footer from './components/Footer'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
@@ -17,6 +16,7 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
+import NotFound from './screens/NotFound'
 
 
 function App() {
@@ -35,6 +35,8 @@ function App() {
           <Route path='/payment' component={PaymentScreen} />
           <Route path='/product/:id' component={ProductScreen} />
           <Route path='/cart/:id?' component={CartScreen} />
+          <Route path='/NotFound' component={NotFound} />
+          
 
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
@@ -45,7 +47,6 @@ function App() {
           <Route path='/admin/orderlist' component={OrderListScreen} />
         </Container>
       </main>
-      <Footer />
     </Router>
   );
 }
