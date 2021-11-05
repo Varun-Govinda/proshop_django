@@ -17,7 +17,7 @@ function Header() {
 
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
                         <Navbar.Brand>Plant-A-Hobby</Navbar.Brand>
@@ -27,13 +27,13 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ml-auto">
 
-                            <LinkContainer to='/Notfound'>
+                            {/* <LinkContainer to='/cart'>   */}
                                 <Nav.Link ><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
-                            </LinkContainer>
+                            {/* </LinkContainer> */}
 
-                            {/* {userInfo ? (
+                            {userInfo ? (
                                 <NavDropdown title={userInfo.name} id='username'>
-                                    <LinkContainer to='/Notfound'>
+                                    <LinkContainer to='/profile'>
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </LinkContainer>
 
@@ -41,25 +41,25 @@ function Header() {
 
                                 </NavDropdown>
                             ) : (
-                                    <LinkContainer to='/Notfound'>
+                                    <LinkContainer to='/profile'>
                                         <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
-                                    </LinkContainer>
-                                )} */}
+                                     </LinkContainer>
+                                )}
 
 
                             {userInfo && userInfo.isAdmin && (
                                 <NavDropdown title='Admin' id='adminmenue'>
-                                    <LinkContainer to='/admin/userlist'>
+                                    {/* <LinkContainer to='/admin/userlist'> */}
                                         <NavDropdown.Item>Users</NavDropdown.Item>
-                                    </LinkContainer>
+                                    {/* </LinkContainer> */}
 
-                                    <LinkContainer to='/admin/productlist'>
+                                    {/* <LinkContainer to='/admin/productlist'> */}
                                         <NavDropdown.Item>Products</NavDropdown.Item>
-                                    </LinkContainer>
+                                    {/* </LinkContainer> */}
 
-                                    <LinkContainer to='/admin/orderlist'>
+                                    {/* <LinkContainer to='/admin/orderlist'> */}
                                         <NavDropdown.Item>Orders</NavDropdown.Item>
-                                    </LinkContainer>
+                                    {/* </LinkContainer> */}
 
                                 </NavDropdown>
                             )}
