@@ -1,6 +1,6 @@
-Feature: showing off behave
+Feature: Testing product info
 
-  Scenario: run a simple test
-     Given we have behave installed
-      When we implement a test
-      Then behave will test it for us!
+  Scenario: View product info
+     Given we are on home page
+      When we click a product
+      Then I should see product info
